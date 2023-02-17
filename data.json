@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Art 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "price": "499",
+      "quantity": "100",
+      "category": "Indian Traditional",
+      "img": "images/1"
+    },
+    {
+      "id": 2,
+      "title": "Art 2",
+      "description": "Random Text as description",
+      "price": "699",
+      "quantity": "100",
+      "category": "Indian Traditional",
+      "img": "images/2"
+    },
+    {
+      "id": 3,
+      "title": "Art 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "price": "499",
+      "quantity": "100",
+      "category": "Indian Traditional",
+      "img": "images/3"
+    },
+    {
+      "id": 4,
+      "title": "Art 4",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "price": "1099",
+      "quantity": "100",
+      "category": "Indian Traditional",
+      "img": "images/4"
+    }
+  ]
+}
