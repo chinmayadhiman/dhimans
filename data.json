@@ -35,6 +35,15 @@
       "quantity": "100",
       "category": "Indian Traditional",
       "img": "images/4"
+    },
+    {
+      "id": 5,
+      "title": "Art 5",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "price": "499",
+      "quantity": "100",
+      "category": "Indian Traditional",
+      "img": "images/5"
     }
   ]
 }
