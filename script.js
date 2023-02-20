@@ -16,20 +16,30 @@ var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 const displayModal = (id) => {
   console.log("Product Card id: " + id);
-  const modalCont = document.getElementsByClassName("modal-content")[0];
-  // modalCont.innerText = "Product selected has id: " + id;
+  let product = data.products.find((p) => p.id === id);
+
   const imgShowcase = document.getElementsByClassName("img-showcase")[0];
   imgShowcase.innerHTML = "";
   const imgSelect = document.getElementsByClassName("img-select")[0];
   imgSelect.innerHTML = "";
-  //<div class="img-item">
-  //  <a href="#" data-id="1">
-  //    <img src="images/tree.jpg" alt="shoe image" />
-  //  </a>
-  //</div>
-  for (var i = 1; i < 4; i++) {
+
+  const prodTitle = document.getElementsByClassName("product-title")[0];
+  prodTitle.innerText = "";
+  const productDesc = document.getElementsByClassName("product-desc")[0];
+  productDesc.innerText = "";
+  const prodCategory = document.getElementsByClassName("product-rating")[0];
+  prodCategory.innerText = "";
+  const exWorkPrice = document.getElementsByClassName("exwork-price")[0];
+  exWorkPrice.innerHTML = "";
+  const fobPrice = document.getElementsByClassName("fob-price")[0];
+  fobPrice.innerHTML = "";
+  const specNode = document.getElementsByClassName("specs")[0];
+  console.log(specNode);
+  const specs = document.createElement("ul");
+  specs.classList.add("specs");
+  for (var i = 0; i < product.img.length; i++) {
     const img = document.createElement("img");
-    img.src = "images/" + id + "/" + "DSC" + i + ".jpg";
+    img.src = "images/" + id + "/" + product.img[i];
     imgShowcase.appendChild(img);
     const imgItem = document.createElement("div");
     imgItem.classList.add("img-item");
@@ -52,6 +62,61 @@ const displayModal = (id) => {
     });
   });
 
+  console.log(product);
+  prodTitle.innerText = product.title;
+  productDesc.innerText = product.description;
+  prodCategory.innerText = product.category;
+  exWorkPrice.innerHTML =
+    "ExWork Price: <span>₹" + product.price.exwork + " / piece </span>";
+  fobPrice.innerHTML =
+    "FoB Price: <span>₹" +
+    product.price.fob +
+    " / piece </span> (at MOQ of " +
+    product.moq +
+    ")";
+
+  const specifications = product.specifications;
+  Object.keys(specifications).forEach((key) => {
+    switch (key) {
+      case "color":
+        const colorItem = document.createElement("li");
+        colorItem.innerHTML =
+          key.toUpperCase() + ": <span>" + specifications[key] + "</span>";
+        specs.appendChild(colorItem);
+        break;
+
+      case "dimensions":
+        const dimItem = document.createElement("li");
+        const finalDim = specifications[key].height
+          ? specifications[key].length +
+            "x" +
+            specifications[key].bredth +
+            "x" +
+            specifications[key].height
+          : specifications[key].length + "x" + specifications[key].bredth;
+
+        dimItem.innerHTML =
+          key.toUpperCase() + ": <span>" + finalDim + "</span>";
+        specs.appendChild(dimItem);
+        break;
+
+      case "features":
+        const featureItem = document.createElement("li");
+        featureItem.innerHTML =
+          key.toUpperCase() +
+          ": <span>" +
+          specifications[key].toString() +
+          "</span>";
+        specs.appendChild(featureItem);
+        break;
+
+      default:
+        break;
+    }
+  });
+
+  specNode.replaceWith(specs);
+
   modal.style.display = "block";
 };
 // When the user clicks on <span> (x), close the modal
@@ -69,6 +134,7 @@ window.onclick = function (event) {
 const productList = document.getElementById("products");
 
 for (let i = 0; i < data.products.length; i++) {
+  const product = data.products[i];
   const productLI = document.createElement("li");
   productLI.classList.add("product-item");
   const productCard = document.createElement("div");
@@ -82,7 +148,7 @@ for (let i = 0; i < data.products.length; i++) {
   productThumb.classList.add("product-thumb");
 
   const productImg = document.createElement("img");
-  productImg.src = data.products[i].img + "/DSC" + 1 + ".jpg";
+  productImg.src = "images/" + parseInt(i + 1) + "/" + product.img[0];
   productThumb.appendChild(productImg);
 
   const productDetail = document.createElement("div");
@@ -91,20 +157,28 @@ for (let i = 0; i < data.products.length; i++) {
   category.classList.add("product-category");
   category.innerText = data.products[i].category;
   productDetail.appendChild(category);
-  const productTitle = document.createElement("a");
-  productTitle.href = "product.html";
-  productTitle.innerText = data.products[i].title;
+  // const productTitle = document.createElement("a");
+  // productTitle.href = "product.html";
+  // productTitle.innerText = data.products[i].title;
   const titleHeading = document.createElement("h4");
-  titleHeading.appendChild(productTitle);
+  titleHeading.innerText = data.products[i].title;
   productDetail.appendChild(titleHeading);
-  const productDesc = document.createElement("p");
-  productDesc.innerText = data.products[i].description;
-  productDetail.appendChild(productDesc);
+  const productDim = document.createElement("p");
+  const dimensions = data.products[i].specifications.dimensions;
+  productDim.innerText = dimensions.height
+    ? "Dimensions: " +
+      dimensions.length +
+      "x" +
+      dimensions.bredth +
+      "x" +
+      dimensions.height
+    : "Dimensions: " + dimensions.length + "x" + dimensions.bredth;
+  productDetail.appendChild(productDim);
   const productBottom = document.createElement("div");
   productBottom.classList.add("product-bottom-details");
   const productPrice = document.createElement("div");
   productPrice.classList.add("product-price");
-  productPrice.innerText = "₹" + data.products[i].price;
+  productPrice.innerText = "₹" + data.products[i].price.exwork + " / piece";
   productBottom.appendChild(productPrice);
   productDetail.appendChild(productBottom);
 
@@ -122,8 +196,14 @@ function slideImage() {
   ).clientWidth;
 
   document.querySelector(".img-showcase").style.transform = `translateX(${
-    -(imgId - 1) * displayWidth
+    -imgId * displayWidth
   }px)`;
 }
 
 window.addEventListener("resize", slideImage);
+
+function removeIfExists(selector) {
+  var x = document.querySelector(selector);
+  console.log(x);
+  if (x) x.remove();
+}

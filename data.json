@@ -1,49 +1,114 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Art 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
-      "price": "499",
-      "quantity": "100",
+      "price": {
+        "exwork": "100",
+        "fob": "299"
+      },
+      "moq": "100",
       "category": "Indian Traditional",
-      "img": "images/1"
+      "img": ["DSC1.jpg", "DSC2.jpg", "DSC3.jpg"],
+      "specifications": {
+        "color": "black",
+        "dimensions": {
+          "length": "100",
+          "bredth": "50",
+          "height": "60"
+        },
+        "features": ["led-lights", "two way design"]
+      },
+      "offers": ""
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Art 2",
       "description": "Random Text as description",
-      "price": "699",
-      "quantity": "100",
+      "price": {
+        "exwork": "100",
+        "fob": "299"
+      },
+      "moq": "100",
       "category": "Indian Traditional",
-      "img": "images/2"
+      "img": ["DSC1.jpg"],
+      "specifications": {
+        "color": "black",
+        "dimensions": {
+          "length": "100",
+          "bredth": "50",
+          "height": "60"
+        },
+        "features": ["led-lights", "two way design"]
+      },
+      "offers": ""
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Art 3",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
-      "price": "499",
-      "quantity": "100",
+      "price": {
+        "exwork": "100",
+        "fob": "299"
+      },
+      "moq": "100",
       "category": "Indian Traditional",
-      "img": "images/3"
+      "img": ["DSC1.jpg"],
+      "specifications": {
+        "color": "black",
+        "dimensions": {
+          "length": "100",
+          "bredth": "50",
+          "height": "60"
+        },
+        "features": ["led-lights", "two way design"]
+      },
+      "offers": ""
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Art 4",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
-      "price": "1099",
-      "quantity": "100",
+      "price": {
+        "exwork": "100",
+        "fob": "299"
+      },
+      "moq": "100",
       "category": "Indian Traditional",
-      "img": "images/4"
+      "img": ["DSC1.jpg", "DSC2.jpg", "DSC3.jpg"],
+      "specifications": {
+        "color": "black",
+        "dimensions": {
+          "length": "100",
+          "bredth": "50",
+          "height": "60"
+        },
+        "features": ["led-lights", "two way design"]
+      },
+      "offers": ""
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Art 5",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
-      "price": "499",
-      "quantity": "100",
+      "price": {
+        "exwork": "100",
+        "fob": "299"
+      },
+      "moq": "100",
       "category": "Indian Traditional",
-      "img": "images/5"
+      "img": ["DSC1.jpg", "DSC2.jpg", "DSC3.jpg"],
+      "specifications": {
+        "color": "black",
+        "dimensions": {
+          "length": "100",
+          "bredth": "50",
+          "height": ""
+        },
+        "features": ["led-lights", "two way design"]
+      },
+      "offers": ""
     }
   ]
 }

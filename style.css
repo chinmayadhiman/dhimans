@@ -338,7 +338,7 @@ ul.list-products {
   margin-bottom: 9px;
 }
 
-.product-details h4 a {
+.product-details h4 {
   font-weight: 500;
   display: block;
   margin-bottom: 9px;
@@ -348,7 +348,7 @@ ul.list-products {
   transition: 0.3s;
 }
 
-.product-details h4 a:hover {
+.product-details h4:hover {
   color: #fbb72c;
 }
 
@@ -386,18 +386,20 @@ ul.list-products {
 
 .product-links {
   text-align: right;
+  padding-top: 1rem;
 }
 
 .product-links a {
   display: inline-block;
-  margin-left: 5px;
-  color: #e1e1e1;
-  transition: 0.3s;
-  font-size: 17px;
+  color: #a0a0a0;
+  transition: 0.2s;
+  font-size: 20px;
+
 }
 
 .product-links a:hover {
   color: #85B839;
+  font-size: 22px;
 }
 
 img {
@@ -666,17 +668,18 @@ img{
 .product-price span{
   font-weight: 400;
 }
-.last-price span{
-  color: #f64749;
-  text-decoration: line-through;
+
+.exwork-price span{
+  text-decoration: underline;
+  line-height: 2rem;
 }
-.new-price span{
+.fob-price span{
   color: #000000;
 }
 .product-detail h2{
   text-transform: capitalize;
   color: #12263a;
-  padding-bottom: 0.6rem;
+  /* padding-bottom: 0.6rem; */
 }
 .product-detail p{
   font-size: 0.9rem;
