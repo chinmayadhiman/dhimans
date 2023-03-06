@@ -109,6 +109,28 @@
         "features": ["led-lights", "two way design"]
       },
       "offers": ""
+    },
+    {
+      "id": "6",
+      "title": "Art 6",
+      "description": "Ldsf consectetur adipisicing elit. Vero, possimus nostrum!",
+      "price": {
+        "exwork": "1200",
+        "fob": "1399"
+      },
+      "moq": "100",
+      "category": "Flower",
+      "img": ["homecenter.jpeg"],
+      "specifications": {
+        "color": "black",
+        "dimensions": {
+          "length": "100",
+          "bredth": "50",
+          "height": ""
+        },
+        "features": ["led-lights", "two way design"]
+      },
+      "offers": ""
     }
   ]
 }
