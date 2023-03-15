@@ -1,4 +1,4 @@
-import data from "./data.json" assert { type: "json" };
+import data from "../data.json" assert { type: "json" };
 let imgId = 1;
 // window.scroll(function () {
 //   var sc = $(window).scrollTop();
@@ -10,6 +10,21 @@ let imgId = 1;
 // });
 
 console.log(data);
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburger.addEventListener("click", () => {
+  //Links
+  navLinks.classList.toggle("open");
+  links.forEach((link) => {
+    link.classList.toggle("fade");
+  });
+
+  //Animation
+  hamburger.classList.toggle("toggle");
+});
 
 // Modal
 var modal = document.getElementById("myModal");

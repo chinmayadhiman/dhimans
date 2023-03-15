@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300);
+.accordian {
+   width: 700px;
+   margin: 40px auto 30px auto;
+   text-align: left;
+}
+.accordian label {
+   padding: 5px 20px;
+   position: relative;
+   z-index: 20;
+   display: block;
+   cursor: pointer;
+   font-family:'Open Sans', Arial, sans-serif;
+   border: 1px solid #e1e1e1;
+color: #222;
+   line-height: 63px;
+   font-size: 18px;
+}
+
+
+.accordian label:hover { color : #dd5749;}
+.accordian input:checked + label, .accordian input:checked + label:hover {
+   
+   color: #dd5749;
+}
+
+.accordian input { display: none; }
+.accordian article {
+   background: rgba(255, 255, 255, 0.5);
+   margin-top: -1px;
+   overflow: hidden;
+   height: 0px;
+   position: relative;
+   z-index: 10;
+   -webkit-transition: height 0.3s ease-in-out;
+   -moz-transition: height 0.3s ease-in-out;
+   -o-transition: height 0.3s ease-in-out;
+   -ms-transition: height 0.3s ease-in-out;
+   transition: height 0.3s ease-in-out;
+}
+.accordian article p {
+   padding: 0px 20px 0px 20px;
+   color: #666;
+font-size: 16px;
+font-family:'Open Sans', Arial, sans-serif;
+font-weight: 300;
+line-height: 1.9;
+   
+}
+.accordian input:checked ~ article {
+   -webkit-transition: height 0.5s ease-in-out;
+   -moz-transition: height 0.5s ease-in-out;
+   -o-transition: height 0.5s ease-in-out;
+   -ms-transition: height 0.5s ease-in-out;
+   transition: height 0.5s ease-in-out;
+   border-right: 1px solid #efefef;
+   border-left: 1px solid #efefef;
+   border-bottom: 1px solid #efefef
+}
+.accordian input:checked ~ article.item-small { height: 100px; }
+.accordian input:checked ~ article.item-medium { height: 100px; }
