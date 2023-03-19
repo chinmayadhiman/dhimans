@@ -1,47 +1,420 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAQs</title>
-    <link rel="stylesheet" type="text/css" href="styles/faq.css" />
-    <script type="module" src="faq.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/faq.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <!-- https://codepen.io/junni/pen/AJLNoG -->
-    <!-- https://codemyui.com/faq-content-style-accordion/ -->
-    <section class="accordian">
-      <div>
-        <input id="item-1" name="accordian-item" type="radio" checked="" />
-        <label for="item-1">Convenient User Interface</label>
-        <article class="item-small">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            ornare porttitor diam..
-          </p>
-        </article>
+    <!-- Navigation bars -->
+    <nav>
+      <div class="logo">
+        <img
+          decoding="async"
+          src="images/multiwebpress.png"
+          alt="Logo Image"
+          style="width: 100vh; padding-top: 5%; display: flex; flex-wrap: wrap"
+        />
       </div>
-      <div>
-        <input id="item-2" name="accordian-item" type="radio" />
-        <label for="item-2">Responsive Design</label>
-        <article class="item-medium">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            ornare porttitor diam.
-          </p>
-        </article>
+      <div class="hamburger">
+        <div class="bars1"></div>
+        <div class="bars2"></div>
+        <div class="bars3"></div>
       </div>
-      <div>
-        <input id="item-3" name="accordian-item" type="radio" />
-        <label for="item-3">Responsive Design</label>
-        <article class="item-medium">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            ornare porttitor diam.
-          </p>
-        </article>
+      <ul class="nav-links">
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><button class="login-button" href="#">Browse</button></li>
+      </ul>
+    </nav>
+    <!-- thumbnail -->
+    <!-- <div class="div-head">
+      <h1>Frequently Asked Questions</h1>
+    </div>
+    <div class="thumbnail">
+      <div class="thumb-card">
+        <div class="img-thumb">
+          <a href="https://www.youtube.com/watch?v=gyy8gJcpU4A" target="_blank"
+            ><img src="images/thumb1.png" alt="image"
+          /></a>
+        </div>
       </div>
-    </section>
+      <div class="thumb-card">
+        <div class="img-thumb">
+          <a href="https://www.youtube.com/watch?v=gyy8gJcpU4A" target="_blank"
+            ><img src="images/thumb1.png" alt="image"
+          /></a>
+        </div>
+      </div>
+      <div class="thumb-card">
+        <div class="img-thumb">
+          <a href="https://www.youtube.com/watch?v=gyy8gJcpU4A" target="_blank"
+            ><img src="images/thumb1.png" alt="image"
+          /></a>
+        </div>
+      </div>
+    </div> -->
+    <!-- main container -->
+    <main>
+      <div class="accordion">
+        <h2 class="heading">Product</h2>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            1 <span>&#41; &nbsp;</span> qwerty qwer qwert qwe?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <div class="drop-down">
+                <div class="drop-area">
+                  <div class="sol">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quod itaque quae nesciunt accusamus ratione iste molestias
+                      natus incidunt quasi autem facilis, voluptatum ipsa.
+                      Beatae consequuntur quisquam reprehenderit? Dolore, ipsa
+                      nihil.Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Quod itaque quae nesciunt accusamus ratione iste
+                    </p>
+                    <button class="content-btn">
+                      <a href="index.html">Blog</a>
+                    </button>
+                  </div>
+                  <div class="videos">
+                    <div class="content-card">
+                      <iframe
+                        src="https://www.youtube.com/embed/xJv26fAZmng?start=14"
+                        title="Dhimans Youtube"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            2<span>&#41; &nbsp;</span> qwerty qwer qwert qwe?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <div class="drop-down">
+                <div class="drop-area">
+                  <div class="sol">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quod itaque quae nesciunt accusamus ratione iste molestias
+                      natus incidunt quasi autem facilis, voluptatum ipsa.
+                      Beatae consequuntur quisquam reprehenderit? Dolore, ipsa
+                      nihil.Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Quod itaque quae nesciunt accusamus ratione iste
+                    </p>
+                    <button class="content-btn">
+                      <a href="index.html">Blog</a>
+                    </button>
+                  </div>
+                  <div class="videos">
+                    <div class="content-card">
+                      <iframe
+                        src="https://www.youtube.com/embed/xJv26fAZmng?start=14"
+                        title="Dhimans Youtube"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            3<span>&#41; &nbsp;</span> qwerty qwer qwert qwe?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <div class="drop-down">
+                <div class="drop-area">
+                  <div class="sol">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quod itaque quae nesciunt accusamus ratione iste molestias
+                      natus incidunt quasi autem facilis, voluptatum ipsa.
+                      Beatae consequuntur quisquam reprehenderit? Dolore, ipsa
+                      nihil.Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Quod itaque quae nesciunt accusamus ratione iste
+                    </p>
+                    <button class="content-btn">
+                      <a href="index.html">Blog</a>
+                    </button>
+                  </div>
+                  <div class="videos">
+                    <div class="content-card">
+                      <iframe
+                        src="https://www.youtube.com/embed/xJv26fAZmng?start=14"
+                        title="Dhimans Youtube"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            4<span>&#41; &nbsp;</span> qwerty qwer qwert qwe?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <div class="drop-down">
+                <div class="drop-area">
+                  <div class="sol">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quod itaque quae nesciunt accusamus ratione iste molestias
+                      natus incidunt quasi autem facilis, voluptatum ipsa.
+                      Beatae consequuntur quisquam reprehenderit? Dolore, ipsa
+                      nihil.Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Quod itaque quae nesciunt accusamus ratione iste
+                    </p>
+                    <button class="content-btn">
+                      <a href="index.html">Blog</a>
+                    </button>
+                  </div>
+                  <div class="videos">
+                    <div class="content-card">
+                      <iframe
+                        src="https://www.youtube.com/embed/xJv26fAZmng?start=14"
+                        title="Dhimans Youtube"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <!-- <div ></div> -->
+        <h2 class="heading">Product</h2>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            1 <span>&#41; &nbsp;</span> qwerty qwer qwert qwe?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <div class="drop-down">
+                <div class="drop-area">
+                  <div class="sol">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quod itaque quae nesciunt accusamus ratione iste molestias
+                      natus incidunt quasi autem facilis, voluptatum ipsa.
+                      Beatae consequuntur quisquam reprehenderit? Dolore, ipsa
+                      nihil.Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Quod itaque quae nesciunt accusamus ratione iste
+                    </p>
+                    <button class="content-btn">
+                      <a href="index.html">Blog</a>
+                    </button>
+                  </div>
+                  <div class="videos">
+                    <div class="content-card">
+                      <iframe
+                        src="https://www.youtube.com/embed/xJv26fAZmng?start=14"
+                        title="Dhimans Youtube"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            2<span>&#41; &nbsp;</span> qwerty qwer qwert qwe?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <div class="drop-down">
+                <div class="drop-area">
+                  <div class="sol">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quod itaque quae nesciunt accusamus ratione iste molestias
+                      natus incidunt quasi autem facilis, voluptatum ipsa.
+                      Beatae consequuntur quisquam reprehenderit? Dolore, ipsa
+                      nihil.Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Quod itaque quae nesciunt accusamus ratione iste
+                    </p>
+                    <button class="content-btn">
+                      <a href="index.html">Blog</a>
+                    </button>
+                  </div>
+                  <div class="videos">
+                    <div class="content-card">
+                      <iframe
+                        src="https://www.youtube.com/embed/xJv26fAZmng?start=14"
+                        title="Dhimans Youtube"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            3<span>&#41; &nbsp;</span> qwerty qwer qwert qwe?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <div class="drop-down">
+                <div class="drop-area">
+                  <div class="sol">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quod itaque quae nesciunt accusamus ratione iste molestias
+                      natus incidunt quasi autem facilis, voluptatum ipsa.
+                      Beatae consequuntur quisquam reprehenderit? Dolore, ipsa
+                      nihil.Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Quod itaque quae nesciunt accusamus ratione iste
+                    </p>
+                    <button class="content-btn">
+                      <a href="index.html">Blog</a>
+                    </button>
+                  </div>
+                  <div class="videos">
+                    <div class="content-card">
+                      <iframe
+                        src="https://www.youtube.com/embed/xJv26fAZmng?start=14"
+                        title="Dhimans Youtube"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            4<span>&#41; &nbsp;</span> qwerty qwer qwert qwe?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <div class="drop-down">
+                <div class="drop-area">
+                  <div class="sol">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quod itaque quae nesciunt accusamus ratione iste molestias
+                      natus incidunt quasi autem facilis, voluptatum ipsa.
+                      Beatae consequuntur quisquam reprehenderit? Dolore, ipsa
+                      nihil.Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Quod itaque quae nesciunt accusamus ratione iste
+                    </p>
+                    <button class="content-btn">
+                      <a href="index.html">Blog</a>
+                    </button>
+                  </div>
+                  <div class="videos">
+                    <div class="content-card">
+                      <iframe
+                        src="https://www.youtube.com/embed/xJv26fAZmng?start=14"
+                        title="Dhimans Youtube"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer container -->
+    <footer class="footer">
+      <div class="footer-left col-md-4 col-sm-6">
+        <p class="about">
+          <span> About the company</span> Browse the latest products right from
+          your home . We have indian metal handicraft supplies & wall art from
+          top suppliers.
+        </p>
+        <div class="icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-google-plus"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-center col-md-4 col-sm-6">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span> Ganesh Colony </span> Amravati, India</p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>(+00) 0000 000 000</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="#"> trade@dhimans.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right col-md-4 col-sm-6">
+        <h2>Dhimans</h2>
+        <p class="menu">
+          <a href="#"> Home</a> | <a href="#"> About</a> |
+          <a href="#"> Services</a> |
+          <a href="#"> Contact</a>
+        </p>
+        <p class="name">Dhimans &copy; 2023</p>
+      </div>
+    </footer>
+    <script type="module" src="scripts/faq.js"></script>
   </body>
 </html>
