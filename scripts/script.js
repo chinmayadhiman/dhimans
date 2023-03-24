@@ -104,10 +104,10 @@ const displayModal = (id) => {
         const dimItem = document.createElement("li");
         const finalDim = specifications[key].height
           ? specifications[key].length +
-            "x" +
-            specifications[key].bredth +
-            "x" +
-            specifications[key].height
+          "x" +
+          specifications[key].bredth +
+          "x" +
+          specifications[key].height
           : specifications[key].length + "x" + specifications[key].bredth;
 
         dimItem.innerHTML =
@@ -182,11 +182,11 @@ for (let i = 0; i < data.products.length; i++) {
   const dimensions = data.products[i].specifications.dimensions;
   productDim.innerText = dimensions.height
     ? "Dimensions: " +
-      dimensions.length +
-      "x" +
-      dimensions.bredth +
-      "x" +
-      dimensions.height
+    dimensions.length +
+    "x" +
+    dimensions.bredth +
+    "x" +
+    dimensions.height
     : "Dimensions: " + dimensions.length + "x" + dimensions.bredth;
   productDetail.appendChild(productDim);
   const productBottom = document.createElement("div");
@@ -210,9 +210,8 @@ function slideImage() {
     ".img-showcase img:first-child"
   ).clientWidth;
 
-  document.querySelector(".img-showcase").style.transform = `translateX(${
-    -imgId * displayWidth
-  }px)`;
+  document.querySelector(".img-showcase").style.transform = `translateX(${-imgId * displayWidth
+    }px)`;
 }
 
 window.addEventListener("resize", slideImage);

@@ -1,0 +1,250 @@
+<!-- @format -->
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" src="scripts/product.js"></script>
+    <title>Dhiman's</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          decoding="async"
+          src="images/multiwebpress.png"
+          alt="Logo Image"
+          style="width: 100vh; padding-top: 5%; display: flex; flex-wrap: wrap"
+        />
+      </div>
+      <div class="hamburger">
+        <div class="bars1"></div>
+        <div class="bars2"></div>
+        <div class="bars3"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><button class="login-button" href="#">Browse</button></li>
+      </ul>
+    </nav>
+    <!-- <header class="primary-header">
+      <div class="container">
+        <h1><a href="index.html">Dhiman's</a></h1>
+        <nav class="primary-navigation">
+          <ul role="list" class="nav-list nav-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Collections</a></li>
+          </ul>
+        </nav>
+        <button
+          class="button-top"
+          onClick="document.getElementById('catalogue').scrollIntoView({ behavior: 'smooth'});"
+        >
+          Browse Catalogue
+        </button>
+        <div class="hamburger">
+          <div class="bars1"></div>
+          <div class="bars2"></div>
+          <div class="bars3"></div>
+        </div>
+      </div> 
+    </header> -->
+    <main>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="card-wrapper">
+            <div class="card">
+              <!-- card left -->
+              <div class="product-imgs">
+                <div class="img-display">
+                  <div class="img-showcase">
+                    <!-- <img src="images/tree.jpg" alt="shoe image" />
+                    <img src="images/feature-1.jpg" alt="shoe image" />
+                    <img src="images/feature-2.jpg" alt="shoe image" />
+                    <img src="images/feature-3.jpg" alt="shoe image" /> -->
+                  </div>
+                </div>
+                <div class="img-select">
+                  <div class="img-item">
+                    <a href="#" data-id="1">
+                      <img src="images/tree.jpg" alt="shoe image" />
+                    </a>
+                  </div>
+                  <div class="img-item">
+                    <a href="#" data-id="2">
+                      <img src="images/feature-1.jpg" alt="shoe image" />
+                    </a>
+                  </div>
+                  <div class="img-item">
+                    <a href="#" data-id="3">
+                      <img src="images/feature-2.jpg" alt="shoe image" />
+                    </a>
+                  </div>
+                  <div class="img-item">
+                    <a href="#" data-id="4">
+                      <img src="images/feature-3.jpg" alt="shoe image" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card right -->
+              <div class="product-content">
+                <h2 class="product-title">Metal Wall Art Tree</h2>
+                <!-- <a href="#" class="product-link">visit nike store</a> -->
+                <div class="product-rating">
+                  <!-- <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>4.7(21)</span> -->
+                  Indian Traditional
+                </div>
+
+                <div class="product-price">
+                  <p class="exwork-price">Price: <span>₹499/piece</span></p>
+                  <p class="fob-price">
+                    Price: <span>₹499/piece (5% gst)</span>
+                  </p>
+                </div>
+
+                <div class="product-detail">
+                  <h2>about this item:</h2>
+                  <p class="product-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illo eveniet veniam tempora fuga tenetur placeat sapiente
+                    architecto illum soluta consequuntur, aspernatur quidem at
+                    sequi ipsa!
+                  </p>
+
+                  <ul class="specs">
+                    <!-- <li>Color: <span>Golden Spray Painted</span></li>
+                    <li>Available: <span>in stock</span></li>
+                    <li>Category: <span>Indian Traditional </span></li>
+                    <li>Shipping Area: <span>All over the world</span></li> 
+                  <li>Shipping Fee: <span>Free</span></li> -->
+                  </ul>
+                </div>
+
+                <div class="purchase-info">
+                  Minimum Order Quantity 100 pieces
+                  <!-- <input type="number" min="0" value="100" /> -->
+                  <!-- <button type="button" class="btn">
+                    Add to Cart <i class="fas fa-shopping-cart"></i>
+                  </button>
+                  <button type="button" class="btn">Compare</button> -->
+                </div>
+
+                <div class="social-links">
+                  <p>Share At:</p>
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product card -->
+      <section class="collections" id="catalogue">
+        <div class="catalogue">
+          <div class="collection-head">
+            <a>Catalogue</a>
+          </div>
+          <ul class="product-grid" id="products"></ul>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer-left col-md-4 col-sm-6">
+          <p class="about">
+            <span> About the company</span> Browse the latest products right
+            from your home . We have indian metal handicraft supplies & wall art
+            from top suppliers.
+          </p>
+          <div class="social-links">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-pinterest"></i>
+            </a>
+          </div>
+          <!-- <div class="icons">
+            <a href="#"><i class="fa fa-facebook-f"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div> -->
+        </div>
+        <div class="footer-center col-md-4 col-sm-6">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span> Ganesh Colony </span> Amravati, India</p>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>(+00) 0000 000 000</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="#"> trade@dhimans.com</a></p>
+          </div>
+        </div>
+        <div class="footer-right col-md-4 col-sm-6">
+          <h2>Dhimans</h2>
+          <p class="menu">
+            <a href="#"> Home</a> | <a href="#"> About</a> |
+            <a href="#"> Services</a> |
+            <a href="#"> Contact</a>
+          </p>
+          <p class="name">Dhimans &copy; 2023</p>
+        </div>
+      </footer>
+      <div class="whatsapp_main">
+        <a href="https://wa.me/9405823171" target="_blank"
+          ><img src="images/whatsapp-con.png" width="7%" class="whatsapp_img"
+        /></a>
+      </div>
+    </main>
+  </body>
+</html>

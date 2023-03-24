@@ -93,7 +93,7 @@ nav {
   /* position: fixed; */
   padding-left: 4rem;
   padding-right: 4rem;
-  z-index: 10;
+  z-index: 9999;
   background-color: #ebebeb;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   margin-bottom: 3rem;
@@ -146,7 +146,13 @@ nav {
 .nav-links li a:hover::before {
   width: 80%;
 }
-
+.whatsapp_main {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  z-index: 99999;
+}
 /*Buttons Styling*/
 
 .login-button {
@@ -185,7 +191,17 @@ nav {
 @media screen and (max-width: 800px) {
   nav {
     position: fixed;
-    z-index: 3;
+    /* z-index: 3; */
+    height: 50px;
+    margin-top: 0;
+  }
+  .logo {
+    width: 270px;
+    padding-top: 0;
+    padding-left: 0px;
+  }
+  .featured-header {
+    margin: 0;
   }
   .hamburger {
     display: block;
@@ -204,18 +220,20 @@ nav {
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    clip-path: circle(50px at 90% -20%);
-    -webkit-clip-path: circle(50px at 90% -10%);
+    clip-path: circle(50px at 40% -20%);
+    -webkit-clip-path: circle(50px at 90% -30%);
     transition: all 1s ease-out;
     pointer-events: none;
     justify-content: flex-start;
     gap: 20px;
-    margin-top: 4rem;
+    margin-top: 3rem;
+    height: 200px;
   }
   .nav-links.open {
     clip-path: circle(1000px at 90% -10%);
     -webkit-clip-path: circle(1000px at 90% -10%);
     pointer-events: all;
+    height: 200px;
   }
   .nav-links li {
     opacity: 0;
@@ -266,24 +284,52 @@ nav {
     background-color: #000;
   }
 }
-
+/* here i start image stack */
 .feature-container {
   margin-top: 20px;
   margin-bottom: 50px;
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 15px 15px;
   grid-auto-flow: row;
   grid-template-areas:
     "prod-1 prod-1 prod-2 prod-2"
-    "prod-1 prod-1 prod-3 prod-3";
+    "prod-1 prod-1 prod-3 prod-3"; */
+  display: flex;
+  flex-direction: row;
 }
-
 .prod-1 {
-  grid-area: prod-1;
-  max-height: 720px;
+  width: 40%;
+  margin: 39px;
+}
+.prod-4 {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+  width: 40%;
+  margin: 30px;
+  margin-left: 75px;
+}
+.prod-2 {
+  margin-top: 0;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+.prod-3 {
+  margin-top: 0;
+  margin-left: 30px;
+}
+.prod-1 {
+  /* grid-area: prod-1; */
+  height: 720px;
   position: relative;
+}
+.prod-1 img {
+  position: absolute;
+  border: 1px solid white;
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-out;
 }
 
 .prod-1:hover,
@@ -305,15 +351,27 @@ nav {
 }
 
 .prod-2 {
-  grid-area: prod-2;
-  max-height: 350px;
+  /* grid-area: prod-1; */
+  height: 345px;
   position: relative;
+}
+.prod-2 img {
+  position: absolute;
+  border: 1px solid white;
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-out;
 }
 
 .prod-3 {
-  grid-area: prod-3;
-  max-height: 350px;
+  /* grid-area: prod-3; */
+  height: 345px;
   position: relative;
+}
+.prod-3 img {
+  position: absolute;
+  border: 1px solid white;
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-out;
 }
 
 .featured-img {
@@ -323,6 +381,94 @@ nav {
   border-radius: 1rem;
   box-shadow: 0 2px 7px #dfdfdf;
 }
+/* prod-1 */
+.prod-1 img:nth-child(1) {
+  z-index: 999;
+}
+.prod-1 img:nth-child(2) {
+  transform: rotate3d(0, 0, 1, 3deg);
+}
+.prod-1 img:nth-child(3) {
+  transform: rotate3d(0, 0, 1, -3deg);
+}
+.prod-1 img:nth-child(4) {
+  transform: rotate3d(0, 0, 1, 2deg);
+}
+
+.prod-1:hover img:nth-child(1) {
+  transform: scale(1.02);
+}
+.prod-1:hover img:nth-child(2) {
+  transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg);
+}
+.prod-1:hover img:nth-child(3) {
+  transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg);
+}
+.prod-1:hover img:nth-child(4) {
+  transform: translate3d(2%, -5%, 0) rotate3d(0, 0, 1, 2deg);
+}
+.prod-1:hover img:nth-child(5) {
+  transform: translate3d(-5%, -2%, 0) rotate3d(0, 0, rod-1);
+}
+/* prod-2 */
+.prod-2 img:nth-child(1) {
+  z-index: 999;
+}
+.prod-2 img:nth-child(2) {
+  transform: rotate3d(0, 0, 1, 3deg);
+}
+.prod-2 img:nth-child(3) {
+  transform: rotate3d(0, 0, 1, -3deg);
+}
+.prod-2 img:nth-child(4) {
+  transform: rotate3d(0, 0, 1, 2deg);
+}
+
+.prod-2:hover img:nth-child(1) {
+  transform: scale(1.02);
+}
+.prod-2:hover img:nth-child(2) {
+  transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg);
+}
+.prod-2:hover img:nth-child(3) {
+  transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg);
+}
+.prod-2:hover img:nth-child(4) {
+  transform: translate3d(2%, -5%, 0) rotate3d(0, 0, 1, 2deg);
+}
+.prod-2:hover img:nth-child(5) {
+  transform: translate3d(-5%, -2%, 0) rotate3d(0, 0, rod-1);
+}
+/* prod-3 */
+.prod-3 img:nth-child(1) {
+  z-index: 999;
+}
+.prod-3 img:nth-child(2) {
+  transform: rotate3d(0, 0, 1, 3deg);
+}
+.prod-3 img:nth-child(3) {
+  transform: rotate3d(0, 0, 1, -3deg);
+}
+.prod-3 img:nth-child(4) {
+  transform: rotate3d(0, 0, 1, 2deg);
+}
+
+.prod-3:hover img:nth-child(1) {
+  transform: scale(1.02);
+}
+.prod-3:hover img:nth-child(2) {
+  transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg);
+}
+.prod-3:hover img:nth-child(3) {
+  transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg);
+}
+.prod-3:hover img:nth-child(4) {
+  transform: translate3d(2%, -5%, 0) rotate3d(0, 0, 1, 2deg);
+}
+.prod-3:hover img:nth-child(5) {
+  transform: translate3d(-5%, -2%, 0) rotate3d(0, 0, rod-1);
+}
+/* image stack end */
 /* .logo {
   height: 100%;
   width: 100%;
@@ -345,7 +491,8 @@ nav {
   opacity: 0.6;
   z-index: -1;
 }
-
+/* @media screen and (max-width: 800px) {
+} */
 .yawa {
   margin: 5rem 0;
 }
@@ -393,14 +540,15 @@ nav {
 
 .faq {
   justify-content: center;
-  padding: 10px 5px;
+  padding: 5px 5px;
   font-size: 1.25rem;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1;
+  text-align: center;
 }
 
 .faq > p {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .videos {
@@ -735,6 +883,23 @@ img {
 @media (max-width: 767px) {
   .footer {
     font-size: 14px;
+  }
+  .prod-1 {
+    height: 260px;
+    width: 60%;
+    margin-right: 0px;
+  }
+  .prod-2 {
+    height: 130px;
+    width: 80%;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+  .prod-3 {
+    height: 130px;
+    width: 80%;
+    margin-bottom: 20px;
+    margin-left: 0px;
   }
   .footer .footer-left,
   .footer .footer-center,
