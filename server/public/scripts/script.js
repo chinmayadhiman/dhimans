@@ -1,4 +1,4 @@
-import data from "../data.json" assert { type: "json" };
+import data from "../../data.json" assert { type: "json" };
 let imgId = 1;
 // window.scroll(function () {
 //   var sc = $(window).scrollTop();
@@ -221,3 +221,16 @@ function removeIfExists(selector) {
   console.log(x);
   if (x) x.remove();
 }
+// var submit = document.querySelector('.submit');
+// submit.addEventListener('click', () => {
+//   window.alert("Enquiry Submitted");
+// })
+
+function submitForm() {
+  setTimeout(alertfunc, 5000);
+  return;
+}
+function alertfunc() {
+  window.alert("Enquiry Sent");
+}
+// submitForm();
