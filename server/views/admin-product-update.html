@@ -13,7 +13,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../public/styles/admin-product-update.css" />
+    <!-- <link rel="stylesheet" href="../public/styles/admin-product-update.css" /> -->
+    <link rel="stylesheet" href="styles/admin-product-update.css" />
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -50,7 +51,8 @@
           <span class="heading">Admin form</span>
         </div>
         <div class="admin">
-          <form action="/" method="POST">
+          <form action="/addProduct" method="POST" enctype="multipart/form-data
+          ">
             <div class="field">
               <label for="Title">Title</label>
               <input
