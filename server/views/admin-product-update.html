@@ -13,7 +13,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../public/styles/admin-product-update.css" />
+    <!-- <link rel="stylesheet" href="../public/styles/admin-product-update.css" /> -->
+    <link rel="stylesheet" href="styles/admin-product-update.css" />
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -50,7 +51,7 @@
           <span class="heading">Admin form</span>
         </div>
         <div class="admin">
-          <form action="/" method="POST">
+          <form action="/addProduct" method="POST" enctype="multipart/form-data">
             <div class="field">
               <label for="Title">Title</label>
               <input
@@ -68,7 +69,7 @@
                 name="description"
                 id="description"
                 placeholder="description"
-                required
+              
               />
             </div>
 
@@ -78,45 +79,45 @@
                 type="number"
                 name="Exwork"
                 placeholder="Exwork"
-                required
+             
               />
             </div>
 
             <div class="field">
               <label for="fob">Fob</label>
-              <input type="number" name="fob" id="fob" required />
+              <input type="number" name="fob" id="fob" />
             </div>
             <div class="field">
               <label for="moq">Moq</label>
-              <input type="number" name="moq" id="moq" required />
+              <input type="number" name="moq" id="moq"  />
             </div>
             <div class="field">
               <label for="category">Category</label>
-              <input type="text" name="category" id="category" required />
+              <input type="text" name="category" id="category" />
             </div>
             <div class="field">
-              <label for="files">Select files:</label>
-              <input type="file" id="files" name="files" multiple />
+              <label for="image">Select files:</label>
+              <input type="file" id="image[]" name="image" multiple/>
             </div>
             <div class="field">
               <label for="color">Color</label>
-              <input type="text" name="color" id="color" required />
+              <input type="text" name="color" id="color" />
             </div>
             <div class="field">
               <label for="length">Length</label>
-              <input type="number" name="length" id="length" required />
+              <input type="number" name="length" id="length"  />
             </div>
             <div class="field">
-              <label for="breadth">Breadth</label>
-              <input type="number" name="breadth" id="breadth" required />
+              <label for="bredth">Breadth</label>
+              <input type="number" name="breadth" id="bredth"  />
             </div>
             <div class="field">
               <label for="height">Height</label>
-              <input type="number" name="height" id="height" required />
+              <input type="number" name="height" id="height"  />
             </div>
             <div class="field">
               <label for="features">Features</label>
-              <input type="text" name="features" id="features" required />
+              <input type="text" name="features" id="features" />
             </div>
             <div class="field">
               <label for="offers">Offers</label>
