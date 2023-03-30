@@ -4,58 +4,66 @@ const addProduct = new mongoose.Schema(
     {
         title: {
             type: String,
-            required: [true, 'Please add a title'],
+            // required: [true, 'Please add a title'],
         },
         description: {
             type: String,
-            required: [true, 'Please add a description'],
+            // required: [true, 'Please add a description'],
         },
         price: {
             fob: {
                 type: Number,
-                required: [true, 'Please add a Fob Price'],
+                // type: String,
+                // required: [true, 'Please add a Fob Price'],
             },
             exwork: {
                 type: Number,
-                required: [true, 'Please add a exwork Price'],
+                // type: String,
+                // required: [true, 'Please add a exwork Price'],
             },
 
         },
         moq: {
             type: Number,
-            required: [true, 'Please add a moq'],
+            // type: String,
+            // required: [true, 'Please add a moq'],
         },
         category: {
             type: String,
             // maxlength: [20, 'Phone number can not be longer than 20 characters'],
-            required: [true, 'Please add a catogory'],
+            // required: [true, 'Please add a catogory'],
         },
         image: {
-            type: [String],
+            type: String
+            // data: Buffer,
+            // ContentType: [String],
             // required: [true, 'Please add a Image'],
         },
         specifications: {
             color: {
                 type: String,
-                required: [true, 'Please add a color field'],
+                // required: [true, 'Please add a color field'],
             },
             dimensions: {
                 length: {
-                    type: String,
-                    required: [true, 'Please add a length value'],
+                    type: Number,
+                    // type: String,
+                    // required: [true, 'Please add a length value'],
                 },
                 bredth: {
-                    type: String,
-                    required: [true, 'Please add a brath value'],
+                    type: Number,
+                    // type: String,
+                    // required: [true, 'Please add a bredth value'],
                 },
                 height: {
-                    type: String,
-                    required: [true, 'Please add a height value'],
+                    type: Number,
+                    // type: String,
+                    // required: [true, 'Please add a height value'],
                 },
             },
             features: {
-                type: [String],
-                required: [true, 'Please add a features'],
+                type: String,
+                // required: [true, 'Please add a features'],
             },
         },
         offers: {
