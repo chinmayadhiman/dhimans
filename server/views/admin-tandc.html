@@ -13,8 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link rel="stylesheet" href="../public/styles/admin-product-update.css" /> -->
-    <link rel="stylesheet" href="styles/admin-product-update.css" />
+    <link rel="stylesheet" href="styles/admin-tandc.css" />
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -38,10 +37,10 @@
       </div>
       <ul class="nav-links">
         <!-- <li><a href="/">Home</a></li>
-          <li><a href="faq">Faq</a></li>
-          <li><a href="product">Product</a></li>
-          <li><button class="login-button" href="terms-cond">T&C</button></li> -->
-        <li><a href="/log">Login/Singup</a></li>
+            <li><a href="faq">Faq</a></li>
+            <li><a href="product">Product</a></li>
+            <li><button class="login-button" href="terms-cond">T&C</button></li> -->
+        <li><a href="/log">Login/Signup</a></li>
         <li><a href="/addFaq">Add Faq</a></li>
         <li><a href="/addProduct">Add Product</a></li>
         <li><a href="/addTandC">Add T&C</a></li>
@@ -51,97 +50,61 @@
     <main>
       <section class="admin_panel" id="admin_panel">
         <div class="admin-head">
-          <span class="heading">Admin form</span>
+          <span class="heading">Payment , Shipping & T&C </span>
         </div>
         <div class="admin">
-          <form action="/addProduct" method="POST" enctype="multipart/form-data">
+          <form action="/addTandC" method="POST">
             <div class="field">
-              <label for="Title">Title</label>
-              <input
-                id="Title"
-                type="text"
-                name="Title"
-                placeholder="Your title"
-                required
-              />
+              <label for="payment">Payment</label>
+              <textarea
+                name="payment"
+                id="payment"
+                cols="30"
+                rows="3"
+              ></textarea>
+              <!-- <input type="text" name="payment" id="payment" required /> -->
             </div>
             <div class="field">
-              <label for="description">Description</label>
-              <input
-                type="text"
-                name="description"
-                id="description"
-                placeholder="description"
-              
-              />
+              <label for="shipment">Shipment</label>
+              <textarea
+                name="shipment"
+                id="shipment"
+                cols="30"
+                rows="3"
+              ></textarea>
+              <!-- <input type="text" id="shipment" name="shipment" required /> -->
             </div>
-
             <div class="field">
-              <label for="exwork">Exwork</label>
-              <input
-                type="number"
-                name="exwork"
-                placeholder="exwork"
-             
-              />
+              <label for="TandC">T&C</label>
+              <textarea name="TandC" id="TandC" cols="30" rows="3"></textarea>
+              <!-- <input type="text" name="termsC" id="termsC" required /> -->
             </div>
 
-            <div class="field">
-              <label for="fob">Fob</label>
-              <input type="number" name="fob" id="fob" />
-            </div>
-            <div class="field">
-              <label for="moq">Moq</label>
-              <input type="number" name="moq" id="moq"  />
-            </div>
-            <div class="field">
-              <label for="category">Category</label>
-              <input type="text" name="category" id="category" />
-            </div>
-            <div class="field">
-              <label for="image">Select files:</label>
-              <input type="file" id="image[]" name="image" multiple/>
-            </div>
-            <div class="field">
-              <label for="color">Color</label>
-              <input type="text" name="color" id="color" />
-            </div>
-            <div class="field">
-              <label for="length">Length</label>
-              <input type="number" name="length" id="length"  />
-            </div>
-            <div class="field">
-              <label for="bredth">Breadth</label>
-              <input type="number" name="bredth" id="bredth"  />
-            </div>
-            <div class="field">
-              <label for="height">Height</label>
-              <input type="number" name="height" id="height"  />
-            </div>
-            <div class="field">
-              <label for="features">Features</label>
-              <input type="text" name="features" id="features" />
-            </div>
-            <div class="field">
-              <label for="offers">Offers</label>
-              <input type="text" name="offers" id="offers" />
-            </div>
             <button type="submit">Submit</button>
           </form>
         </div>
       </section>
 
-      
       <footer class="footer">
         <div class="footer-left col-md-4 col-sm-6">
           <p class="about">
-            <span> About the company</span> We are a Maharashtra-based export company providing quality handicrafts and Jaggery. Our commitment to trust, transparency, and uncompromising quality sets us apart. With a focus on customization, we offer a unique and personalized experience for our customers.
+            <span> About the company</span> We are a Maharashtra-based export
+            company providing quality handicrafts and Jaggery. Our commitment to
+            trust, transparency, and uncompromising quality sets us apart. With
+            a focus on customization, we offer a unique and personalized
+            experience for our customers.
           </p>
           <div class="social-links">
-            <a href="https://www.facebook.com/people/Dhimans/100089375347119/ " target="_blank">
+            <a
+              href="https://www.facebook.com/people/Dhimans/100089375347119/ "
+              target="_blank"
+            >
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.linkedin.com/company/dhiman-s/" target="_blank">
+            <a
+              href="https://www.linkedin.com/company/dhiman-s/"
+              target="_blank"
+            >
               <i class="fab fa-linkedin"></i>
             </a>
             <a href="https://www.instagram.com/dhiman_exports/" target="_blank">
@@ -150,7 +113,10 @@
             <a href="https://wa.me/9405823171" target="_blank">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCwFhXDP0AB9aBNwbcRWOLRg" target="_blank">
+            <a
+              href="https://www.youtube.com/channel/UCwFhXDP0AB9aBNwbcRWOLRg"
+              target="_blank"
+            >
               <i class="fab fa-youtube"></i>
             </a>
           </div>
@@ -179,7 +145,8 @@
         <div class="footer-right col-md-4 col-sm-6">
           <h2>Dhimans</h2>
           <p class="menu">
-            <a href="/log"> Login/Signup</a> | <a href="/addProduct"> Add Products</a> |
+            <a href="/log">Login/Signup</a> |
+            <a href="/addProduct"> Add Products</a> |
             <a href="/addFaq">Add FAQ</a> |
             <a href="/addTandC">Add Payment & shipping T&C</a>
           </p>
@@ -191,6 +158,7 @@
           ><img src="images/whatsapp-con.png" width="100%" class="whatsapp_img"
         /></a>
       </div>
+    </main>
     <script type="module" src="scripts/faq.js"></script>
   </body>
 </html>

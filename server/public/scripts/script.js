@@ -1,4 +1,8 @@
 import data from "../../data.json" assert { type: "json" };
+// import addProductModal from "../../modals/addProductModal";
+// const data2 = addProductModal.find();
+
+// console.log(data2);
 let imgId = 1;
 // window.scroll(function () {
 //   var sc = $(window).scrollTop();
